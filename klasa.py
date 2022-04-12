@@ -556,19 +556,6 @@ class Transformacje:
             deg = int(np.trunc(dd))
             mnt = int(np.trunc((dd-deg) * 60))
             sec = ((dd-deg) * 60 - mnt) * 60
-            dms = [deg, mnt, round(sec, 5)]
-            
+            dms = [deg, mnt, round(sec, 5)]       
             return(dms)            
-
-
-
-if __name__ == "__main__":
-    # utworzenie obiektu
-    geo = Transformacje(model = "wgs84")
-    # dane XYZ geocentryczne
-    X = 3664940.500; Y = 1409153.590; Z = 5009571.170
-    phi, lam, h = geo.xyz2plh(X, Y, Z)
-    print(phi, lam, h)
-    phi, lam, h = geo.xyz2plh(X, Y, Z)
-    print(phi, lam, h)
 
