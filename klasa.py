@@ -1,7 +1,6 @@
 import math as m
 import numpy as np
 
-
 class Transformacje:
     def __init__(self, model: str = "wgs84"):
         """
@@ -417,7 +416,6 @@ class Transformacje:
             """     
             dx = xK - xP
             dy = yK - yP
-            
             d = m.sqrt(dx**2 + dy**2)
             
             return(d)
@@ -557,5 +555,5 @@ class Transformacje:
             mnt = int(np.trunc((dd-deg) * 60))
             sec = ((dd-deg) * 60 - mnt) * 60
             dms = [deg, mnt, round(sec, 5)]       
+            
             return(dms)            
-
